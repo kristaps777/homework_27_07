@@ -10,7 +10,6 @@ function myFizzBuzz() {
     let endValue = document.getElementById('end_value').value;
     let sectionCheck = mainContainer.hasChildNodes();
 
-
     // error check switch
     switch (true) {
         case divWidth.value == '':
@@ -28,6 +27,11 @@ function myFizzBuzz() {
             return errorMsg.innerText += "-- div width can't be negative --";
             break;
 
+        case divWidth.value > 200:
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- max div width is 200px --";
+            break;
+
         case divHeight.value == '':
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- enter div height --";
@@ -41,6 +45,26 @@ function myFizzBuzz() {
         case divHeight.value < 0:
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- div height can't be negative --";
+            break;
+
+        case divHeight.value > 200:
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- max div height is 200px --";
+            break;
+
+        case startValue > endValue:
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- start value must be lower than end value --";
+            break;
+
+        case startValue == '':
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- please enter start value --";
+            break;
+
+        case endValue == '':
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- please enter start value --";
             break;
     };
 

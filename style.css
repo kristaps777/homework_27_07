@@ -80,7 +80,7 @@ input {
 
 input::placeholder {
     font-style: italic;
-    padding-left: 20px;
+    padding-left: 10px;
     color: grey;
 }
 

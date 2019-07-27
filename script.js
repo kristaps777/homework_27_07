@@ -69,7 +69,7 @@ function myFizzBuzz() {
     };
 
     if (sectionCheck) {
-        return errorMsg.innerText += "-- already generated --";
+        return errorMsg.innerText += "-- already generated, delete first --";
     };
 
     errorMsg.innerText = '';
@@ -123,11 +123,11 @@ function changeColor() {
     let fizzColor = fizzColorInput.value;
     let bothColor = bothColorInput.value;
     $('.div_class').css("background-color", divColor);
-    $('.div_class').css("opacity", ".5");
+    $('.div_class').css("opacity", ".6");
     $('.buzz_class').css("background-color", buzzColor);
-    $('.buzz_class').css("opacity", ".5");
+    $('.buzz_class').css("opacity", ".6");
     $('.fizz_class').css("background-color", fizzColor);
-    $('.fizz_class').css("opacity", ".5");
+    $('.fizz_class').css("opacity", ".6");
     $('.both_class').css("background-color", bothColor);
-    $('.both_class').css("opacity", ".5");
+    $('.both_class').css("opacity", ".6");
 };

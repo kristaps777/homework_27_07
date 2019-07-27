@@ -6,6 +6,10 @@
     list-style: none;
 }
 
+input {
+    width: 200px;
+}
+
 section {
     width: 100%;
     display: grid;

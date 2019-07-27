@@ -71,6 +71,7 @@ header {
 
 .div_controls_first_row, .div_controls_second_row {
     display: flex;
+    flex-direction: column;
 }
 
 .inactive {
@@ -323,5 +324,8 @@ footer {
     }
     #error_messages {
         width: 400px;
+    }
+    .div_controls_first_row, .div_controls_second_row {
+        flex-direction: row;
     }
 }

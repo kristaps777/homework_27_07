@@ -113,6 +113,10 @@ input {
     padding-left: 10px;
 }
 
+input[type=checkbox] {
+    height: 20px;
+}
+
 input::placeholder {
     font-style: italic;
     padding-left: 10px;
@@ -125,6 +129,7 @@ label {
     border-radius: 20px;
     padding: 5px;
     margin-bottom: 5px;
+    border: 2px outset #ce502e;
 }
 
 .buttons {
@@ -251,6 +256,10 @@ footer {
 .both_class {
     background-color: rgba(221, 93, 33, 0.5);
     animation: pulse 3s linear infinite;
+}
+
+.shadow {
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
 }
 
 @keyframes pulse {

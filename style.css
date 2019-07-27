@@ -6,25 +6,72 @@
     list-style: none;
 }
 
+body {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.black {
+    width: 100%;
+    min-height: -webkit-fill-available;
+    height: 100vh;
+    position: fixed;
+    display: block;
+    background-color: black;
+    top: 0;
+    left: 0;
+    z-index: -12;
+}
+
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    opacity: .7;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: -webkit-fill-available;
+    height: 100vh;
+    z-index: -10;
+    background: url('img/background.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 input {
     width: 200px;
 }
 
-section {
-    width: 100%;
+#error_messages {
+    background-color: lightgreen;
+    border-radius: 20px;
+    height: fit-content;
+    min-height: 200px;
+    width: 400px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main section {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(100, 1fr);
     grid-gap: 1em;
 }
 
-div {
+main div {
     background-color: rgba(207, 72, 142, 0.4);
     width: 100px;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: centerl
 }
 
 .fizz_class {
@@ -41,15 +88,13 @@ div {
 
 /* media queries */
 @media (min-width: 576px) {
-    section {
+    main section {
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(20, 1fr);
     }
 }
 
 @media (min-width: 992px) {
-    section {
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(10, 1fr);
+    main section {
+        grid-template-columns: repeat(10, 1fr);       
     }
 }

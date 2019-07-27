@@ -25,6 +25,12 @@
 
     <body>
 
+        <!-- figure for fixed background(unused) + black underlay to avoid white flash -->
+        <figure>
+            <div class="black"></div>
+            <!-- <div id="fixed"></div> -->
+        </figure>
+
         <header>
 
             <input id="div_width"
@@ -51,18 +57,26 @@
                 placeholder="enter buzz value here"
                 value="5">
 
+            <input id="start_value"
+                type="number"
+                placeholder="enter start value here"
+                value="1">
+
+            <input id="end_value"
+                type="number"
+                placeholder="enter end value here"
+                value="100">
+
             <button type="button"
                 onclick="myFizzBuzz()">GENERATE</button>
             <button type="button"
                 onclick="myDestroyer()">DELETE</button>
 
+            <section id="error_messages"></section>
+
         </header>
 
-        <main id="main">
-
-
-
-        </main>
+        <main id="main"></main>
 
         <footer>placeholder</footer>
 

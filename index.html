@@ -33,44 +33,76 @@
 
         <header>
 
-            <input id="div_width"
-                type="number"
-                placeholder="enter div width here"
-                min="100"
-                max="200"
-                value="100">
+            <div class="div_controls">
 
-            <input id="div_height"
-                type="number"
-                placeholder="enter div height here"
-                min="100"
-                max="200"
-                value="100">
+                <div class="div_controls_sub">
 
-            <input id="fizz_value"
-                type="number"
-                placeholder="enter fizz value here"
-                value="3">
+                    <label for="div width">div width</label>
+                    <input id="div_width"
+                        type="number"
+                        placeholder="enter div width here"
+                        min="100"
+                        max="200"
+                        value="100"
+                        name="div width">
 
-            <input id="buzz_value"
-                type="number"
-                placeholder="enter buzz value here"
-                value="5">
+                    <label for="div width">div height</label>
+                    <input id="div_height"
+                        type="number"
+                        placeholder="enter div height here"
+                        min="100"
+                        max="200"
+                        value="100"
+                        name="div height">
 
-            <input id="start_value"
-                type="number"
-                placeholder="enter start value here"
-                value="1">
+                </div>
 
-            <input id="end_value"
-                type="number"
-                placeholder="enter end value here"
-                value="100">
+                <div class="div_controls_sub">
 
-            <button type="button"
-                onclick="myFizzBuzz()">GENERATE</button>
-            <button type="button"
-                onclick="myDestroyer()">DELETE</button>
+                    <label for="fizz value">fizz value</label>
+                    <input id="fizz_value"
+                        type="number"
+                        placeholder="enter fizz value here"
+                        value="3"
+                        name="fizz value">
+
+                    <label for="buzz value">buzz value</label>
+                    <input id="buzz_value"
+                        type="number"
+                        placeholder="enter buzz value here"
+                        value="5"
+                        name="buzz value">
+
+                </div>
+
+                <div class="div_controls_sub">
+
+                    <label for="start value">start value</label>
+                    <input id="start_value"
+                        type="number"
+                        placeholder="enter start value here"
+                        value="1"
+                        name="start value">
+
+                    <label for="end value">end value</label>
+                    <input id="end_value"
+                        type="number"
+                        placeholder="enter end value here"
+                        value="100"
+                        name="end value">
+
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button type="button"
+                    onclick="myFizzBuzz()">GENERATE</button>
+                <button type="button"
+                    onclick="myDestroyer()">DELETE</button>
+
+            </div>
 
             <section id="error_messages"></section>
 
@@ -78,7 +110,7 @@
 
         <main id="main"></main>
 
-        <footer>placeholder</footer>
+        <footer>&copy 2019</footer>
 
     </body>
 

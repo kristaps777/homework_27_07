@@ -20,12 +20,12 @@ function myFizzBuzz() {
 
         case divWidth.value == 0:
             errorMsg.innerText = '';
-            return errorMsg.innerText += "-- div width can't be zero--";
+            return errorMsg.innerText += "-- div width can't be zero --";
             break;
 
         case divWidth.value < 0:
             errorMsg.innerText = '';
-            return errorMsg.innerText += "-- div width can't be negative--";
+            return errorMsg.innerText += "-- div width can't be negative --";
             break;
 
         case divHeight.value == '':
@@ -35,7 +35,7 @@ function myFizzBuzz() {
 
         case divHeight.value == 0:
             errorMsg.innerText = '';
-            return errorMsg.innerText += "-- div height can't be zeroc --";
+            return errorMsg.innerText += "-- div height can't be zero --";
             break;
 
         case divHeight.value < 0:

@@ -81,10 +81,9 @@ function myFizzBuzz() {
     for (let i = startValue; i <= endValue; i++) {
 
         const myDiv = document.createElement('div');
-        const myBr = document.createElement('br');
         myDiv.id = "block_ID_" + i;
+        myDiv.className = 'div_class';
         myDiv.innerText = i;
-        myDiv.appendChild(myBr);
         myDiv.style.width = divWidth.value + 'px';
         myDiv.style.height = divHeight.value + 'px';
 
@@ -95,7 +94,7 @@ function myFizzBuzz() {
 
         if (i % buzzValue === 0) {
             myDiv.innerText += " BUZZ";
-            myDiv.className += " buzz_class";
+            myDiv.className = "buzz_class";
         };
 
         if (i % fizzValue === 0 && i % buzzValue === 0) {
@@ -112,4 +111,23 @@ function myDestroyer() {
     const errorMsg = document.getElementById('error_messages');
     target.parentNode.removeChild(target);
     errorMsg.innerText = '';
+};
+
+function changeColor() {
+    const divColorInput = document.getElementById('div_color');
+    const buzzColorInput = document.getElementById('buzz_color');
+    const fizzColorInput = document.getElementById('fizz_color');
+    const bothColorInput = document.getElementById('both_color');
+    let divColor = divColorInput.value;
+    let buzzColor = buzzColorInput.value;
+    let fizzColor = fizzColorInput.value;
+    let bothColor = bothColorInput.value;
+    $('.div_class').css("background-color", divColor);
+    $('.div_class').css("opacity", ".5");
+    $('.buzz_class').css("background-color", buzzColor);
+    $('.buzz_class').css("opacity", ".5");
+    $('.fizz_class').css("background-color", fizzColor);
+    $('.fizz_class').css("opacity", ".5");
+    $('.both_class').css("background-color", bothColor);
+    $('.both_class').css("opacity", ".5");
 };

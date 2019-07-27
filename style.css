@@ -52,7 +52,6 @@ header {
 
 .div_controls {
     display: flex;
-    margin-right: 20px;
     width: fit-content;
     height: fit-content;
     flex-direction: column;
@@ -66,6 +65,16 @@ header {
 
 .div_controls .div_controls_sub:nth-child(3) {
     margin-right: 0;
+}
+
+.color_picker {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    border: none;
+    margin: 0;
 }
 
 input {
@@ -94,8 +103,7 @@ label {
 
 .buttons {
     display: flex;
-    align-items: center;
-    margin-right: 10px;
+    align-items: center;  
     margin-bottom: 20px;
 }
 
@@ -130,8 +138,8 @@ button {
 }
 
 #error_messages {
-    height: 120px;
-    width: 400px;
+    height: 80px;
+    width: 300px;
     padding-left: 20px;
     color: firebrick;
     position: relative;
@@ -173,9 +181,6 @@ main section {
 }
 
 main div {
-    background-color: rgba(207, 72, 142, 0.4);
-    width: 100px;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,16 +201,20 @@ footer {
     margin-top: 20px;
 }
 
+.div_class {
+    background-color: rgba(207, 72, 142, 0.5);
+}
+
 .fizz_class {
-    background: linear-gradient(to bottom, #cfe7fa 0%,#6393c1 100%);
+    background-color: rgba(51, 115, 175, 0.5);
 }
 
 .buzz_class {
-    background: linear-gradient(to bottom, #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); 
+    background-color: rgba(61, 211, 106, 0.5); 
 }
 
 .both_class {
-    background: linear-gradient(to bottom, #d80f0f 1%,#f46e0e 100%);
+    background-color: rgba(221, 93, 33, 0.5);
 }
 
 /* media queries */
@@ -224,8 +233,13 @@ footer {
     }
     .buttons {
         margin-bottom: 0;
+        margin-right: 10px;
     }
     .div_controls {
         flex-direction: row;
+        margin-right: 20px;
+    }
+    #error_messages {
+        width: 400px;
     }
 }

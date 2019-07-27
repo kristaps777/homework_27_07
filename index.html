@@ -16,6 +16,9 @@
         <link rel="shortcut icon"
             href="#">
 
+        <!-- jQuery link -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
         <!-- JS link -->
         <script src="script.js"
             defer></script>
@@ -25,7 +28,7 @@
 
     <body>
 
-        <!-- figure for fixed background(unused) + black underlay to avoid white flash -->
+        <!-- black underlay for background -->
         <figure>
             <div class="black"></div>
             <!-- <div id="fixed"></div> -->
@@ -34,6 +37,30 @@
         <header>
 
             <div class="div_controls">
+
+                <input class="color_picker"
+                    id="div_color"
+                    type="color"
+                    name="div color"
+                    value="#CF488E">
+
+                <input class="color_picker"
+                    id="fizz_color"
+                    type="color"
+                    name="fizz color"
+                    value="#3373AF">
+
+                <input class="color_picker"
+                    id="buzz_color"
+                    type="color"
+                    name="buzz color"
+                    value="#3DD36A">
+
+                <input class="color_picker"
+                    id="both_color"
+                    type="color"
+                    name="both color"
+                    value="#DD5D21">
 
                 <div class="div_controls_sub">
 
@@ -98,7 +125,7 @@
             <div class="buttons">
 
                 <button type="button"
-                    onclick="myFizzBuzz()">GENERATE</button>
+                    onclick="myFizzBuzz();changeColor()">GENERATE</button>
                 <button type="button"
                     onclick="myDestroyer()">DELETE</button>
 

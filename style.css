@@ -96,11 +96,12 @@ hr {
     margin: 0;
     position: absolute;
     top: -5%;
-    left: 50%;
+    left: 60%;
 }
 
 #buzz_color, #both_color {
     top: 45%;
+    left: 60%;
 }
 
 input {

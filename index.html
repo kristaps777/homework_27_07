@@ -36,83 +36,119 @@
 
         <header>
 
-            <div class="div_controls">
+            <div id="controls"
+                class="inactive">
 
-                <div class="div_controls_sub">
+                <div class="div_controls_first_row">
 
-                    <label for="div_width">div width</label>
-                    <input class="color_picker"
-                        id="div_color"
-                        type="color"
-                        name="div color"
-                        value="#CF488E">
-                    <input id="div_width"
-                        type="number"
-                        placeholder="enter div width here"
-                        min="100"
-                        max="200"
-                        value="100"
-                        name="div width">
+                    <div class="div_controls_sub">
 
-                    <label for="div_height">div height</label>
-                    <input class="color_picker"
-                        id="both_color"
-                        type="color"
-                        name="both color"
-                        value="#DD5D21">
-                    <input id="div_height"
-                        type="number"
-                        placeholder="enter div height here"
-                        min="100"
-                        max="200"
-                        value="100"
-                        name="div height">
+                        <label for="div_width">div width</label>
+                        <input class="color_picker"
+                            id="div_color"
+                            type="color"
+                            name="div color"
+                            value="#CF488E">
+                        <input id="div_width"
+                            type="number"
+                            placeholder="enter div width here"
+                            min="100"
+                            max="200"
+                            value="100"
+                            name="div width">
+
+                        <label for="div_height">div height</label>
+                        <input class="color_picker"
+                            id="both_color"
+                            type="color"
+                            name="both color"
+                            value="#DD5D21">
+                        <input id="div_height"
+                            type="number"
+                            placeholder="enter div height here"
+                            min="100"
+                            max="200"
+                            value="100"
+                            name="div height">
+
+                    </div>
+
+                    <div class="div_controls_sub">
+
+                        <label for="fizz_value">fizz value</label>
+                        <input class="color_picker"
+                            id="fizz_color"
+                            type="color"
+                            name="fizz color"
+                            value="#3373AF">
+                        <input id="fizz_value"
+                            type="number"
+                            placeholder="enter fizz value here"
+                            value="3"
+                            name="fizz value">
+
+                        <label for="buzz_value">buzz value</label>
+                        <input class="color_picker"
+                            id="buzz_color"
+                            type="color"
+                            name="buzz color"
+                            value="#3DD36A">
+                        <input id="buzz_value"
+                            type="number"
+                            placeholder="enter buzz value here"
+                            value="5"
+                            name="buzz value">
+
+                    </div>
+
+                    <div class="div_controls_sub">
+
+                        <label for="start_value">start value</label>
+                        <input id="start_value"
+                            type="number"
+                            placeholder="enter start value here"
+                            value="1"
+                            name="start value">
+
+                        <label for="end_value">end value</label>
+                        <input id="end_value"
+                            type="number"
+                            placeholder="enter end value here"
+                            value="100"
+                            name="end value">
+
+                    </div>
+
 
                 </div>
 
-                <div class="div_controls_sub">
+                <hr>
 
-                    <label for="fizz_value">fizz value</label>
-                    <input class="color_picker"
-                        id="fizz_color"
-                        type="color"
-                        name="fizz color"
-                        value="#3373AF">
-                    <input id="fizz_value"
-                        type="number"
-                        placeholder="enter fizz value here"
-                        value="3"
-                        name="fizz value">
+                <div class="div_controls_second_row">
 
-                    <label for="buzz_value">buzz value</label>
-                    <input class="color_picker"
-                        id="buzz_color"
-                        type="color"
-                        name="buzz color"
-                        value="#3DD36A">
-                    <input id="buzz_value"
-                        type="number"
-                        placeholder="enter buzz value here"
-                        value="5"
-                        name="buzz value">
+                    <div class="div_controls">
 
-                </div>
+                        <label for="border_radius">border radius</label>
+                        <input id="border_radius"
+                            type="number"
+                            placeholder="enter border radius here"
+                            min="0"
+                            max="100"
+                            value="0"
+                            name="border radius">
 
-                <div class="div_controls_sub">
 
-                    <label for="start_value">start value</label>
-                    <input id="start_value"
-                        type="number"
-                        placeholder="enter start value here"
-                        value="1"
-                        name="start value">
 
-                    <label for="end_value">end value</label>
-                    <input id="end_value"
-                        type="number"
-                        placeholder="enter end value here"
-                        value="100"
-                        name="end value">
+                    </div>
+
+                    <div class="div_controls">
+
+                        <label for="animations">animations</label>
+                        <input id="animations"
+                            type="checkbox"
+                            name="animations toggler">
+
+                    </div>
 
                 </div>
 
@@ -121,9 +157,11 @@
             <div class="buttons">
 
                 <button type="button"
-                    onclick="myFizzBuzz();changeColor()">GENERATE</button>
+                    onclick="myFizzBuzz();changeColor();borderRadius();animationToggler()">GENERATE</button>
                 <button type="button"
                     onclick="myDestroyer()">DELETE</button>
+                <button type="button"
+                    onclick="showControls()">SETTINGS</button>
 
             </div>
 

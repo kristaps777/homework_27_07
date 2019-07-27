@@ -1,9 +1,10 @@
 function myFizzBuzz() {
 
-    const divWidth = document.getElementById('div_width');
-    const divHeight = document.getElementById('div_height');
+    const divWidth = document.getElementById('div_width').value;
+    const divHeight = document.getElementById('div_height').value;
     const fizzValue = document.getElementById('fizz_value').value;
     const buzzValue = document.getElementById('buzz_value').value;
+    const radValue = document.getElementById('border_radius').value;
     const errorMsg = document.getElementById('error_messages');
     const mainContainer = document.getElementById('main');
     let startValue = document.getElementById('start_value').value;
@@ -12,42 +13,42 @@ function myFizzBuzz() {
 
     // error check switch
     switch (true) {
-        case divWidth.value == '':
+        case divWidth == '':
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- enter div width --";
             break;
 
-        case divWidth.value == 0:
+        case divWidth == 0:
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- div width can't be zero --";
             break;
 
-        case divWidth.value < 0:
+        case divWidth < 0:
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- div width can't be negative --";
             break;
 
-        case divWidth.value > 200:
+        case divWidth > 200:
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- max div width is 200px --";
             break;
 
-        case divHeight.value == '':
+        case divHeight == '':
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- enter div height --";
             break;
 
-        case divHeight.value == 0:
+        case divHeight == 0:
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- div height can't be zero --";
             break;
 
-        case divHeight.value < 0:
+        case divHeight < 0:
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- div height can't be negative --";
             break;
 
-        case divHeight.value > 200:
+        case divHeight > 200:
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- max div height is 200px --";
             break;
@@ -65,6 +66,16 @@ function myFizzBuzz() {
         case endValue == '':
             errorMsg.innerText = '';
             return errorMsg.innerText += "-- please enter start value --";
+            break;
+
+        case radValue < 0:
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- border radius can't be negative --";
+            break;
+
+        case radValue > 100:
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- max border radius is 100 --";
             break;
     };
 
@@ -84,8 +95,8 @@ function myFizzBuzz() {
         myDiv.id = "block_ID_" + i;
         myDiv.className = 'div_class';
         myDiv.innerText = i;
-        myDiv.style.width = divWidth.value + 'px';
-        myDiv.style.height = divHeight.value + 'px';
+        myDiv.style.width = divWidth + 'px';
+        myDiv.style.height = divHeight + 'px';
 
         if (i % fizzValue === 0) {
             myDiv.innerText += " FIZZ";
@@ -130,4 +141,34 @@ function changeColor() {
     $('.fizz_class').css("opacity", ".6");
     $('.both_class').css("background-color", bothColor);
     $('.both_class').css("opacity", ".6");
+};
+
+function borderRadius() {
+    const divBorderRadiusInput = document.getElementById('border_radius');
+    let borderRadius = divBorderRadiusInput.value;
+    $('.div_class').css("border-radius", borderRadius + '%');
+    $('.buzz_class').css("border-radius", borderRadius + '%');
+    $('.fizz_class').css("border-radius", borderRadius + '%');
+    $('.both_class').css("border-radius", borderRadius + '%');
+};
+
+function showControls() {
+    const controls = document.getElementById('controls');
+    let property = controls.getAttribute('class');
+
+    if (property == 'div_controls') {
+        controls.setAttribute('class', 'inactive');
+    } else {
+        controls.setAttribute('class', 'div_controls');
+    }
+};
+
+function animationToggler() {
+    const animationToggler = document.getElementById("animations");
+    console.log(animationToggler.checked);
+    if (animationToggler.checked === false) {
+        $('.fizz_class').css("animation-name", 'none');
+        $('.buzz_class').css("animation-name", 'none');
+        $('.both_class').css("animation-name", 'none');
+    }
 };

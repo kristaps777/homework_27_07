@@ -10,9 +10,13 @@ function myFizzBuzz() {
     const borderSolid = document.getElementById("border_style_solid");
     const borderDashed = document.getElementById("border_style_dashed");
     const borderDotted = document.getElementById("border_style_dotted");
-    let startValue = document.getElementById('start_value').value;
-    let endValue = document.getElementById('end_value').value;
+    let startValue = parseInt(document.getElementById('start_value').value);
+    let endValue = parseInt(document.getElementById('end_value').value);
     let sectionCheck = mainContainer.hasChildNodes();
+
+    if (sectionCheck) {
+        return errorMsg.innerText += "-- already generated, delete first --";
+    };
 
     // error check switch
     switch (true) {
@@ -102,10 +106,6 @@ function myFizzBuzz() {
             break;
     };
 
-    if (sectionCheck) {
-        return errorMsg.innerText += "-- already generated, delete first --";
-    };
-
     errorMsg.innerText = '';
 
     const myContainer = document.createElement('section');
@@ -136,6 +136,7 @@ function myFizzBuzz() {
         };
 
         document.getElementById('container').appendChild(myDiv);
+
     };
 
 };

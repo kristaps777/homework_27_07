@@ -76,6 +76,13 @@
     -webkit-transition: 1s;
     transition: 1s;
   }
+
+  #input_border ul, li {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      color: white;
+  }
   
   .div_controls_sub {
     display: -webkit-box;
@@ -127,12 +134,12 @@
     margin: 0;
     position: absolute;
     top: -5%;
-    left: 60%;
+    left: 70%;
   }
   
   #buzz_color, #both_color {
     top: 45%;
-    left: 60%;
+    left: 70%;
   }
   
   input {
@@ -147,6 +154,8 @@
   
   input[type=checkbox] {
     height: 20px;
+    width: 40px;
+    margin-bottom: 0;
   }
   
   input::-webkit-input-placeholder {
@@ -293,7 +302,8 @@
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    border: 1px solid black;
+    border-color: black;
+    border-width: 2px;
   }
   
   main div:hover {

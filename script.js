@@ -7,6 +7,9 @@ function myFizzBuzz() {
     const radValue = document.getElementById('border_radius').value;
     const errorMsg = document.getElementById('error_messages');
     const mainContainer = document.getElementById('main');
+    const borderSolid = document.getElementById("border_style_solid");
+    const borderDashed = document.getElementById("border_style_dashed");
+    const borderDotted = document.getElementById("border_style_dotted");
     let startValue = document.getElementById('start_value').value;
     let endValue = document.getElementById('end_value').value;
     let sectionCheck = mainContainer.hasChildNodes();
@@ -20,7 +23,7 @@ function myFizzBuzz() {
 
         case divWidth == 0:
             errorMsg.innerText = '';
-            return errorMsg.innerText += "-- div width can't be zero --";
+            return errorMsg.innerText += "-- div width can't be 0px --";
             break;
 
         case divWidth < 0:
@@ -40,7 +43,7 @@ function myFizzBuzz() {
 
         case divHeight == 0:
             errorMsg.innerText = '';
-            return errorMsg.innerText += "-- div height can't be zero --";
+            return errorMsg.innerText += "-- div height can't be 0px --";
             break;
 
         case divHeight < 0:
@@ -73,9 +76,29 @@ function myFizzBuzz() {
             return errorMsg.innerText += "-- border radius can't be negative --";
             break;
 
-        case radValue > 100:
+        case radValue > 50:
             errorMsg.innerText = '';
-            return errorMsg.innerText += "-- max border radius is 100 --";
+            return errorMsg.innerText += "-- max border radius is 50% --";
+            break;
+
+        case borderSolid.checked == true && borderDashed.checked == true && borderDotted.checked == true:
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- please select only one border type --";
+            break;
+
+        case borderSolid.checked == true && borderDashed.checked == true:
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- please select only one border type --";
+            break;
+
+        case borderSolid.checked == true && borderDotted.checked == true:
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- please select only one border type --";
+            break;
+
+        case borderDashed.checked == true && borderDotted.checked == true:
+            errorMsg.innerText = '';
+            return errorMsg.innerText += "-- please select only one border type --";
             break;
     };
 
@@ -165,10 +188,39 @@ function showControls() {
 
 function animationToggler() {
     const animationToggler = document.getElementById("animations");
-    console.log(animationToggler.checked);
     if (animationToggler.checked === false) {
         $('.fizz_class').css("animation-name", 'none');
         $('.buzz_class').css("animation-name", 'none');
         $('.both_class').css("animation-name", 'none');
+    }
+};
+
+function borderToggler() {
+    const borderSolid = document.getElementById("border_style_solid");
+    const borderDashed = document.getElementById("border_style_dashed");
+    const borderDotted = document.getElementById("border_style_dotted");
+
+    switch (true) {
+        case borderSolid.checked === true:
+            $('.fizz_class').css("border-style", 'solid');
+            $('.buzz_class').css("border-style", 'solid');
+            $('.both_class').css("border-style", 'solid');
+            $('.div_class').css("border-style", 'solid');
+            break;
+
+        case borderDashed.checked === true:
+            $('.fizz_class').css("border-style", 'dashed');
+            $('.buzz_class').css("border-style", 'dashed');
+            $('.both_class').css("border-style", 'dashed');
+            $('.div_class').css("border-style", 'dashed');
+            break;
+
+        case borderDotted.checked === true:
+            $('.fizz_class').css("border-style", 'dotted');
+            $('.buzz_class').css("border-style", 'dotted');
+            $('.both_class').css("border-style", 'dotted');
+            $('.div_class').css("border-style", 'dotted');
+            break;
+
     }
 };

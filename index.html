@@ -43,7 +43,7 @@
 
                     <div class="div_controls_sub">
 
-                        <label for="div_width">div width</label>
+                        <label for="div_width">div width(<em>px</em>)</label>
                         <input class="color_picker"
                             id="div_color"
                             type="color"
@@ -58,7 +58,7 @@
                             value="100"
                             name="div width">
 
-                        <label for="div_height">div height</label>
+                        <label for="div_height">div height(<em>px</em>)</label>
                         <input class="color_picker"
                             id="both_color"
                             type="color"
@@ -77,7 +77,7 @@
 
                     <div class="div_controls_sub">
 
-                        <label for="fizz_value">fizz value</label>
+                        <label for="fizz_value">fizz value(<em>int</em>)</label>
                         <input class="color_picker"
                             id="fizz_color"
                             type="color"
@@ -90,7 +90,7 @@
                             value="3"
                             name="fizz value">
 
-                        <label for="buzz_value">buzz value</label>
+                        <label for="buzz_value">buzz value(<em>int</em>)</label>
                         <input class="color_picker"
                             id="buzz_color"
                             type="color"
@@ -107,7 +107,7 @@
 
                     <div class="div_controls_sub">
 
-                        <label for="start_value">start value</label>
+                        <label for="start_value">start value(<em>int</em>)</label>
                         <input id="start_value"
                             class="shadow"
                             type="number"
@@ -115,7 +115,7 @@
                             value="1"
                             name="start value">
 
-                        <label for="end_value">end value</label>
+                        <label for="end_value">end value(<em>int</em>)</label>
                         <input id="end_value"
                             class="shadow"
                             type="number"
@@ -134,13 +134,13 @@
 
                     <div class="div_controls">
 
-                        <label for="border_radius">border radius</label>
+                        <label for="border_radius">border radius(<em>%</em>)</label>
                         <input id="border_radius"
                             class="shadow"
                             type="number"
                             placeholder="enter border radius here"
                             min="0"
-                            max="100"
+                            max="50"
                             value="0"
                             name="border radius">
 
@@ -157,6 +157,30 @@
 
                     </div>
 
+                    <div class="div_controls">
+
+                        <label for="input_border">border style</label>
+
+                        <div id="input_border">
+
+                            <ul>
+                                <li><input id="border_style_solid"
+                                        type="checkbox"
+                                        name="border style toggler"
+                                        checked>solid</li>
+                                <li><input id="border_style_dashed"
+                                        type="checkbox"
+                                        name="border style toggler">dashed</li>
+                                <li><input id="border_style_dotted"
+                                        type="checkbox"
+                                        name="border style toggler">dotted</li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
                 </div>
 
             </div>
@@ -164,7 +188,7 @@
             <div class="buttons">
 
                 <button type="button"
-                    onclick="myFizzBuzz();changeColor();borderRadius();animationToggler()">GENERATE</button>
+                    onclick="myFizzBuzz();changeColor();borderRadius();animationToggler();borderToggler();">GENERATE</button>
                 <button type="button"
                     onclick="myDestroyer()">DELETE</button>
                 <button type="button"

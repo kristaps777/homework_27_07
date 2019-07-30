@@ -151,30 +151,22 @@ function changeColor() {
     let fizzColor = fizzColorInput.value;
     let bothColor = bothColorInput.value;
     $('.div_class').css("background-color", divColor);
-    $('.div_class').css("opacity", ".6");
     $('.buzz_class').css("background-color", buzzColor);
-    $('.buzz_class').css("opacity", ".6");
     $('.fizz_class').css("background-color", fizzColor);
-    $('.fizz_class').css("opacity", ".6");
     $('.both_class').css("background-color", bothColor);
-    $('.both_class').css("opacity", ".6");
+    $('.div_class, .fizz_class, .buzz_class, .both_class').css("opacity", ".6");
 };
 
 function borderRadius() {
     const divBorderRadiusInput = document.getElementById('border_radius');
     let borderRadius = divBorderRadiusInput.value;
-    $('.div_class').css("border-radius", borderRadius + '%');
-    $('.buzz_class').css("border-radius", borderRadius + '%');
-    $('.fizz_class').css("border-radius", borderRadius + '%');
-    $('.both_class').css("border-radius", borderRadius + '%');
+    $('.div_class, .buzz_class, .fizz_class, .both_class').css("border-radius", borderRadius + '%');
 };
 
 function animationToggler() {
     const animationToggler = document.getElementById("animations");
     if (animationToggler.checked === false) {
-        $('.fizz_class').css("animation-name", 'none');
-        $('.buzz_class').css("animation-name", 'none');
-        $('.both_class').css("animation-name", 'none');
+        $('.fizz_class, .buzz_class, .both_class').css("animation-name", 'none');
     }
 };
 
@@ -185,24 +177,15 @@ function borderToggler() {
 
     switch (true) {
         case borderSolid.checked === true:
-            $('.fizz_class').css("border-style", 'solid');
-            $('.buzz_class').css("border-style", 'solid');
-            $('.both_class').css("border-style", 'solid');
-            $('.div_class').css("border-style", 'solid');
+            $('.div_class, .fizz_class, .buzz_class, .both_class').css("border-style", 'solid');
             break;
 
         case borderDashed.checked === true:
-            $('.fizz_class').css("border-style", 'dashed');
-            $('.buzz_class').css("border-style", 'dashed');
-            $('.both_class').css("border-style", 'dashed');
-            $('.div_class').css("border-style", 'dashed');
+            $('.div_class, .fizz_class, .buzz_class, .both_class').css("border-style", 'dashed');
             break;
 
         case borderDotted.checked === true:
-            $('.fizz_class').css("border-style", 'dotted');
-            $('.buzz_class').css("border-style", 'dotted');
-            $('.both_class').css("border-style", 'dotted');
-            $('.div_class').css("border-style", 'dotted');
+            $('.div_class, .fizz_class, .buzz_class, .both_class').css("border-style", 'dotted');
             break;
 
     }

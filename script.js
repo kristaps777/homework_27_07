@@ -223,7 +223,7 @@ const deleteBtn = document.querySelector('#delete');
 deleteBtn.onclick = function myDestroyer() {
     const main = document.getElementById('main');
     const errorMsg = document.getElementById('error_messages');
-    let target = document.getElementById('container');
+    const target = document.getElementById('container');
     let mainState = main.hasChildNodes();
 
     if (mainState) {

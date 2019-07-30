@@ -141,13 +141,6 @@ function myFizzBuzz() {
 
 };
 
-function myDestroyer() {
-    const target = document.getElementById('container');
-    const errorMsg = document.getElementById('error_messages');
-    target.parentNode.removeChild(target);
-    errorMsg.innerText = '';
-};
-
 function changeColor() {
     const divColorInput = document.getElementById('div_color');
     const buzzColorInput = document.getElementById('buzz_color');
@@ -174,17 +167,6 @@ function borderRadius() {
     $('.buzz_class').css("border-radius", borderRadius + '%');
     $('.fizz_class').css("border-radius", borderRadius + '%');
     $('.both_class').css("border-radius", borderRadius + '%');
-};
-
-function showControls() {
-    const controls = document.getElementById('controls');
-    let property = controls.getAttribute('class');
-
-    if (property == 'div_controls') {
-        controls.setAttribute('class', 'inactive');
-    } else {
-        controls.setAttribute('class', 'div_controls');
-    }
 };
 
 function animationToggler() {
@@ -223,5 +205,45 @@ function borderToggler() {
             $('.div_class').css("border-style", 'dotted');
             break;
 
+    }
+};
+
+// generate button
+const generateBtn = document.querySelector('#generate');
+generateBtn.onclick = function allTogether() {
+    myFizzBuzz();
+    changeColor();
+    borderRadius();
+    animationToggler();
+    borderToggler();
+};
+
+// delete button
+const deleteBtn = document.querySelector('#delete');
+deleteBtn.onclick = function myDestroyer() {
+    const main = document.getElementById('main');
+    const errorMsg = document.getElementById('error_messages');
+    let target = document.getElementById('container');
+    let mainState = main.hasChildNodes();
+
+    if (mainState) {
+        target.parentNode.removeChild(target);
+        errorMsg.innerText = '';
+    } else {
+        return errorMsg.innerText = "-- nothing to delete, generate first --";
+    }
+
+};
+
+// settings button
+const settingsBtn = document.querySelector('#settings');
+settingsBtn.onclick = function showControls() {
+    const controls = document.getElementById('controls');
+    let property = controls.getAttribute('class');
+
+    if (property == 'div_controls') {
+        controls.setAttribute('class', 'inactive');
+    } else {
+        controls.setAttribute('class', 'div_controls');
     }
 };
